@@ -16,7 +16,7 @@ def get_page():
     
     # handling possible error
     if not re.match(r'https?://medium.com/', url):
-        print('PLEASE ENTER A VALID WEBSITE, or MAKE SURE IT IS A MEDIUM ARTICLE!!')
+        print('Please enter a valid website, or make sure it is a medium article!!')
         sys.exit(1)
 
     # Code here - Call get method in requests object, pass url and collect it in res
@@ -45,6 +45,7 @@ def collect_text(soup):
     return text
 
 # function to save file in the current directory
+
 def save_file(text):
     if not os.path.exists('./scraped_articles'):
         os.mkdir('./scraped_articles')
@@ -53,8 +54,10 @@ def save_file(text):
     fname = f'scraped_articles/{name}.txt'
     
     # Code here - write a file using with (2 lines)
+    
     with open(fname, 'w', encoding='utf-8') as file:
         file.write(text)
+        
     # Code ends here
 
     print(f'File saved in directory {fname}')
