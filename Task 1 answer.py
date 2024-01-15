@@ -16,7 +16,7 @@ def get_page():
     
     # handling possible error
     if not re.match(r'https?://medium.com/', url):
-        print('Please enter a valid website, or make sure it is a medium article')
+        print('PLEASE ENTER A VALID WEBSITE, or MAKE SURE IT IS A MEDIUM ARTICLE!!')
         sys.exit(1)
 
     # Code here - Call get method in requests object, pass url and collect it in res
