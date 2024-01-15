@@ -60,6 +60,7 @@ def save_file(text):
     print(f'File saved in directory {fname}')
 
 
+
 if __name__ == '__main__':
     text = collect_text(get_page())
     save_file(text)
